@@ -31,11 +31,18 @@ namespace WindowsFormsApp2
             {
                 mouse.MoveTo(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
                 mouse.LeftClick();
-                keyboard.send(label1.Text);
-                keyboard.send("~");
-                keyboard.send("~");
+                keyboard.send(label1.Text+"~");
                 Thread.Sleep(100);
                 keyboard.SwitchToThisWindow(keyboard.FindWindow(null, "Form1"),true);
+                textBox3.Text = "";
+            }
+            else if (e.KeyCode==Keys.F1)
+            {
+                mouse.MoveTo(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                mouse.LeftClick();
+                keyboard.send(textBox3.Text + "~");
+                Thread.Sleep(100);
+                keyboard.SwitchToThisWindow(keyboard.FindWindow(null, "Form1"), true);
                 textBox3.Text = "";
             }
         }

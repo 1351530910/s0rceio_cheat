@@ -130,7 +130,7 @@ namespace WindowsFormsApp2
             this.textBox3.Size = new System.Drawing.Size(230, 21);
             this.textBox3.TabIndex = 15;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keydown);
+            this.textBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keydown);
             // 
             // label1
             // 
@@ -168,6 +168,7 @@ namespace WindowsFormsApp2
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            
         }
 
         #endregion
